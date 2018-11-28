@@ -1,0 +1,10 @@
+<div class="container">
+<h2>Donner un avis</h2>
+</div>
+<div class="container">
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content, label: 'Votre avis sur ce restaurant', error: 'Attention : Votre avis est obligatoire' %>
+  <%= f.input :rating, label: 'Votre note', error: 'Attention, la note est obligatoire'%>
+    <%= f.button :submit %>
+<% end %>
+</div>

@@ -1,0 +1,7 @@
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name, label: 'Nom du restaurant', error: 'Attention : le nom est obligatoire' %>
+  <%= f.input :address, label: 'Adresse',  placeholder: '101 rue du restaurant 59000 Lille', error: "Attention : l'adresse est obligatoire" %>
+  <%= f.input :phone_number, label: 'Téléphone' %>
+  <%= f.input :category, label: 'Type de cuisine', collection: Restaurant::CATEGORIES, error: 'Attention : la catégorie est obligatoire' %>
+  <%= f.button :submit %>
+<% end %>
